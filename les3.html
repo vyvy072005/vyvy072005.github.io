@@ -1,0 +1,341 @@
+<html>
+
+<body background = 'background1.png', width = 100%, alink = 'blue', link ='blue' , vlink = 'blue'>
+<table width = 100%, height = 15%>
+<td background = 'background4.png'>
+<h1 align = center>Python</h1>
+</td>
+</table>
+
+ 
+<table width = 100%,height = 50%, background = #11111, border = 0, table-layout = fixed>
+<td width = 5%></td>
+<td width = 15%, align = center><h2>Содержание</h2></td>
+<td width = 5%></td>
+<td width =45, align = center><h2>Уроки по изучению языка программирования Python</h2></td>
+<td width = 5%></td>
+
+
+
+<tr>
+<td></td>
+<td  background = 'background4.png', height = 2%, valign = top>
+
+<font face = 'Georgia'>
+<ol>
+	<li><a href = 'index.html', color=blue> Главная страница </a></li>
+	<li><a href = 'les1.html'>Урок1.Введение в написание программ</a></li>
+	<li><a href = 'les2.html'>Урок2.Переменные и типы данных</a></li>
+	<li><a href = 'les3.html'>Урок3.Консольный ввод и вывод</a></li>
+	<li><a href = 'les4.html'>Урок4.Арифметические операции</a></li>
+	<li><a href = 'les5.html'>Урок5.Условные выражения</a></li>
+	<li><a href = 'les6.html'>Урок6.Условная конструкция</a></li>
+	<li><a href = 'les7.html'>Урок7.Циклы</a></li>
+	<li><a href = 'les8.html'>Урок8.Списки</a></li>
+</ol>
+</font>
+</td>
+
+<td>
+</td>
+
+
+                              
+<td align = justify  > <font face = 'Georgia'>
+<p><h3>Консольный ввод и вывод</h3>
+</p>
+<head>
+<link rel = 'stylesheet' href = 'probcss.css'>
+</head>
+
+<p><h3>Вывод на консоль</h3>
+</p>
+
+<p>Для вывода информации на консоль предназначена встроенная функция <b>print()</b>. При вызове этой функции ей в скобках передается выводимое значение:
+</p>
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> 
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="string">"Hello Masha"</code>
+			<code class="plain">) </code>
+		</div>
+	</td>	
+	</tr>
+</table>
+
+<p>Данный код выведет нам на консоль строку "Hello Masha".
+</p>
+
+<p>Отличительной особенностью этой функции является то, что по умолчанию она выводит значение на отдельной строке. Например:
+</p>
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> 
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="string">"Hello Masha"</code>
+			<code class="plain">) </code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="string">"Hello World"</code>
+			<code class="plain">) </code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="string">"Hello Ben"</code>
+			<code class="plain">) </code>
+		</div>
+	</td>	
+	</tr>
+</table>
+
+<p>Здесь три вызова функции print() выводят некоторое сообщение. Причем при выводе на консоль каждое сообщение будет размещаться на отдельной строке:
+</p>
+
+<img src="рис3.png" width=15% height=8%>
+
+<p>Такое поведение не всегда удобно. Например, мы хотим, чтобы все значения выводились на одной строке. Для этого нам надо настроить поведение функции с помощью параметра end. Этот параметр задает символы, которые добавляются в конце к выводимой строке и . При применении параметра end вызов функции print() выглядит следующим образом:
+</p>
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> 
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">значение, end = конечные_символы</code>
+			<code class="plain">) </code>
+		</div>
+	</td>	
+	</tr>
+</table>
+
+<p>По умолчанию end равен символу "\n", который задает перевод на следующую строку. Собственно поэтому функция print по умолчанию выводит передаваемое ей значение на отдельной строке.
+</p>
+
+<p>Теперь определим, чтобы функция не делала перевод на следующую строку, а выводила значение на той же строке:
+</p>
+
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> 
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="string">"Hello Masha"</code>
+			<code class="plain">, end</code>
+			<code class="keyword">=</code>
+			<code class="string">" "</code>
+			<code class="plain">) </code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="string">"Hello World"</code>
+			<code class="plain">, end</code>
+			<code class="keyword">=</code>
+			<code class="string">" "</code>
+			<code class="plain">) </code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="string">"Hello Ben"</code>
+			<code class="plain">) </code>
+		</div>
+	</td>	
+	</tr>
+</table>
+
+<p>То есть теперь выводимые значения будут разделяться пробелом:
+</p>
+
+<img src="рис4.png" width=35% height=18%>
+
+
+<p>Причем это может быть не один символ, а набор символов:
+</p>
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> 
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="string">"Hello Masha"</code>
+			<code class="plain">, end</code>
+			<code class="keyword">=</code>
+			<code class="string">" and "</code>
+			<code class="plain">) </code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="string">"Hello World"</code>
+			<code class="plain">, end</code>
+			<code class="keyword">=</code>
+			<code class="string">" and "</code>
+			<code class="plain">) </code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="string">"Hello Ben"</code>
+			<code class="plain">) </code>
+		</div>
+	</td>	
+	</tr>
+</table>
+
+<p>В данном случае выводимые сообщения будут отделяться символами " and ":
+</p>
+
+
+<img src="рис5.png" width=35% height=18%>
+
+<p><h3>Консольный ввод</h3>
+</p>
+
+<p>
+Наряду с выводом на консоль мы можем получать ввод пользователя с консоли, получать вводимые данные. Для этого в Python определена функция input(). В эту функцию передается приглашение к вводу. А результат ввода мы можем сохранить в переменную. Например, определим код для ввода пользователем имени:
+</p>
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> <div class="ctd">2</div> 
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="plain">name</code>
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code>
+			<code class="functions">input</code>
+			<code class="plain">(</code>
+			<code class="string">"Введите своё имя: "</code>
+			<code class="plain">) </code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">f</code><code class="string">"Ваше имя: {name}"</code>
+			<code class="plain">) </code>
+		</div>
+	</td>	
+	</tr>
+</table>
+
+<p>
+В данном случае в функцию input() передается приглашение к вводу в виде строки "Введите свое имя: ". Результат функции - результат ввода пользователя передается в переменную name. Затем мы можем вывести значение этой переменной на консоль с помощью функции print(). Пример работы кода:
+</p>
+
+<img src="рис6.png" width=25% height=10%>
+
+<p>Еще пример с вводом нескольких значений:
+</p>
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> 
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="plain">name</code>
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code>
+			<code class="functions">input</code>
+			<code class="plain">(</code>
+			<code class="string">"Введите своё имя: "</code>
+			<code class="plain">) </code>
+		</div>
+		<div>
+			<code class="plain">ege</code>
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code>
+			<code class="functions">input</code>
+			<code class="plain">(</code>
+			<code class="string">"Введите свой возраст: "</code>
+			<code class="plain">) </code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">f</code><code class="string">"Ваше имя: {name} Ваш возраст:{ege}"</code>
+			<code class="plain">) </code>
+		</div>
+	</td>	
+	</tr>
+</table>
+
+<p>Пример работы программы:
+</p>
+
+<img src="рис7.png" width=25% height=10%>
+
+
+<p>Стоит учитывать, что все введенные значения рассматриваются как значения типа str, то есть строки. И даже если мы вводим число, как в втором случае в коде выше, то Python все равно будет рассматривать введенное значение как строку, а не как число.
+</p>
+
+
+
+<p>
+<button class="double1-border-button" onClick="window.location.href='les2.html'">
+Урок2.Переменные
+</button>
+<button class="double2-border-button" onClick="window.location.href='les4.html'">
+Урок4.Арифметические операции
+</button>
+</p>
+
+
+
+<table width = 100%,height = 50%, height = 5%, border = 0>
+<td height = 20%>
+
+<td>
+</table>
+</body>
+<html>

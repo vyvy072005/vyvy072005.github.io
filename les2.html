@@ -1,0 +1,700 @@
+<html>
+
+<body background = 'background1.png', width = 100%, alink = 'blue', link ='blue' , vlink = 'blue'>
+<table width = 100%, height = 15%>
+<td background = 'background4.png'>
+<h1 align = center>Python</h1>
+</td>
+</table>
+
+ 
+<table width = 100%,height = 50%, background = #11111, border = 0, table-layout = fixed>
+<td width = 5%></td>
+<td width = 15%, align = center><h2>Содержание</h2></td>
+<td width = 5%></td>
+<td width =45, align = center><h2>Уроки по изучению языка программирования Python</h2></td>
+<td width = 5%></td>
+
+
+
+<tr>
+<td></td>
+<td  background = 'background4.png', height = 2%, valign = top>
+
+<font face = 'Georgia'>
+<ol>
+	<li><a href = 'index.html', color=blue> Главная страница </a></li>
+	<li><a href = 'les1.html'>Урок1.Введение в написание программ</a></li>
+	<li><a href = 'les2.html'>Урок2.Переменные и типы данных</a></li>
+	<li><a href = 'les3.html'>Урок3.Консольный ввод и вывод</a></li>
+	<li><a href = 'les4.html'>Урок4.Арифметические операции</a></li>
+	<li><a href = 'les5.html'>Урок5.Условные выражения</a></li>
+	<li><a href = 'les6.html'>Урок6.Условная конструкция</a></li>
+	<li><a href = 'les7.html'>Урок7.Циклы</a></li>
+	<li><a href = 'les8.html'>Урок8.Списки</a></li>
+	<li><a href = 'oge.html'>Решение задач ОГЭ</a></li>
+	<li><a href = 'ege.html'>Решение задач ЕГЭ</a></li>
+</ol>
+</font>
+</td>
+
+<td>
+</td>
+
+
+                              
+<td align = justify  > <font face = 'Georgia'>
+<p><h3>Переменные и типы данных</h3>
+</p>
+<head>
+<link rel = 'stylesheet' href = 'probcss.css'>
+</head>
+<p>Переменные предназначены для хранения данных. Название переменной в Python должно начинаться с алфавитного символа или со знака подчеркивания и может содержать алфавитно-цифровые символы и знак подчеркивания. И кроме того, название переменной не должно совпадать с названием ключевых слов языка Python.
+</p>
+
+
+<p>Например, создадим переменную:
+</p>
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+<tbody> <tr  class ="t1" >
+<td  class ="td1"> 
+<div class="ctd">1</div> 
+</td>
+<td>
+<div>
+
+
+<div>
+<code class="plaim">name</code> 
+<code class="plain"> </code>
+ <code class="keyword">=</code>
+ <code class="plain"> </code> 
+  <code class="plain">(</code> 
+ <code class="string">"Masha"</code>
+  <code class="plain">)</code> 
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+
+
+<p>Здесь определена переменная name, которая хранит строку "Tom".
+</p>
+
+<p>Отличительной особенностью переменной является то, что мы можем менять ее значение в течение работы программы:
+</p>
+
+
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="plaim">name</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="plain">(</code> 
+			<code class="string">"Masha"</code>
+			<code class="plain">)</code> 
+			<code>&nbsp</code>
+			<code class="comment"> # переменной name равна "Masha"</code> 
+			
+
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="string">"Masha"</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # выводит: Masha</code> 
+		</div>
+		<div>
+			<code class="plaim">name</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="plain">(</code> 
+			<code class="string">"Alexandra"</code>
+			<code class="plain">)</code> 
+			<code>&nbsp </code>
+			<code class="comment">  # меняем значение на "Alexandra"</code> 
+
+		</div>
+	
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="string">"Alexandra"</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment"># выводит: Alexandra</code> 
+		</div>
+	
+	</td>	
+	</tr>
+</table>
+
+
+
+<p><h3>Типы данных</h3>
+</p>
+
+<p>Переменная хранит данные одного из типов данных. В Python существует множество различных типов данных. В данном случае рассмотрим только самые базовые типы: <b>bool</b>, <b>int</b>, <b>float</b>, <b>str</b>.
+</p>
+
+<p><h3>Логические значения</h3>
+</p>
+
+<p>Тип bool представляет два логических значения: <b>True</b> (верно, истина) или <b>False</b> (неверно, ложь). Значение <b>True</b> служит для того, чтобы показать, что что-то истинно. Тогда как значение <b>False</b>, наоборот, показывает, что что-то ложно. Пример переменных данного типа:
+</p>
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> <div class="ctd">5</div>
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="plaim">isMarried</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="bool">False</code> 		
+
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="string">isMarried</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # False</code> 
+		</div>
+		
+		<div>
+			<code>&nbsp </code>
+		</div>
+		
+		<div>
+			<code class="plaim">isAlive</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="bool">True</code> 		
+
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="string">isAlive</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # True</code> 
+		</div>
+	
+	</td>	
+	</tr>
+</table>
+
+<p><h3>Целые числа</h3>
+</p>
+
+
+<p>Тип <b>int</b> представляет целое число, например, 1, 4, 8, 50. Пример:
+</p>
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> <div class="ctd">2</div> 
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="plaim">age</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value">17</code> 		
+
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="string">"Возраст":</code>
+			<code>, age</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # Возраст: 17</code> 
+		</div>
+		
+		
+	
+	</td>	
+	</tr>
+</table>
+
+<p>По умолчанию стандартные числа расцениваются как числа в десятичной системе. Но Python также поддерживает числа в двоичной, восьмеричной и шестнадцатеричной системах.
+</p>
+
+<p>Для указания, что число представляет двоичную систему, перед числом ставится префикс <b>0b</b>:
+</p>
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> <div class="ctd">5</div> <div class="ctd">6</div> 
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="plain">a</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value">0b11</code> 		
+
+		</div>
+		<div>
+			<code class="plain">b</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value">00b1011</code> 		
+
+		</div>
+		<div>
+			<code class="plain">c</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value">0b100001</code> 		
+
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">a</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # 3 в десятичной системе</code> 
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">b</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # 11 в десятичной системе</code> 
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">b</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # 33 в десятичной системе</code> 
+		</div>
+		
+	
+	</td>	
+	</tr>
+</table>
+
+<p>Для указания, что число представляет восьмеричную систему, перед числом ставится префикс <b>0o</b>:
+</p>
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> <div class="ctd">5</div> <div class="ctd">6</div> 
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="plain">a</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value">0o7</code> 		
+
+		</div>
+		<div>
+			<code class="plain">b</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value"> 0o11</code> 		
+
+		</div>
+		<div>
+			<code class="plain">c</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value">0o17</code> 		
+
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">a</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # 7 в десятичной системе</code> 
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">b</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # 9 в десятичной системе</code> 
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">b</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # 15 в десятичной системе</code> 
+		</div>
+		
+	
+	</td>	
+	</tr>
+</table>
+
+<p>Для указания, что число представляет шестнадцатеричную систему, перед числом ставится префикс <b>0x</b>:
+</p>
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> <div class="ctd">5</div> <div class="ctd">6</div> 
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="plain">a</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value">0x0A</code> 		
+
+		</div>
+		<div>
+			<code class="plain">b</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value"> 0xFF</code> 		
+
+		</div>
+		<div>
+			<code class="plain">c</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value">0xA1</code> 		
+
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">a</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # 10 в десятичной системе</code> 
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">b</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # 255 в десятичной системе</code> 
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">b</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # 161 в десятичной системе</code> 
+		</div>
+		
+	
+	</td>	
+	</tr>
+</table>
+
+
+<p>Стоит отметить, что в какой-бы системе мы не передали число в функцию print для вывода на консоль, оно по умолчанию будет выводиться в десятичной системе.
+</p>
+
+
+<p><h3>Дробные числа</h3>
+</p>
+
+<p>Тип <b>float</b> представляет число с плавающей точкой, например, 1.2 или 34.76. В качесте разделителя целой и дробной частей используется точка.
+</p>
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> <div class="ctd">5</div> <div class="ctd">6</div> 
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="plain">height</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value">1.68</code> 		
+
+		</div>
+		<div>
+			<code class="plain">width</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value"> 67.</code> 		
+
+		</div>
+		<div>
+			<code class="plain">pi</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value">3.14</code> 		
+
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">height</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # 1.68</code> 
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">width</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # 67.0</code> 
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">pi</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # 3.14</code> 
+		</div>
+		
+	
+	</td>	
+	</tr>
+</table>
+
+
+<p>Число с плавающей точкой можно определять в экспоненциальной записи:
+</p>
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> <div class="ctd">5</div> 
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="plain">x</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value">3.9e3</code> 		
+
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">x</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # 3900.0</code> 
+		</div>
+		<div>
+			<code> &nbsp </code> 
+		</div>
+		<div>
+			<code class="plain">x</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value">3.9e-3</code> 		
+
+		</div>
+		
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">x</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # 0.0039</code> 
+		</div>
+		
+		
+	
+	</td>	
+	</tr>
+</table>
+
+
+<p>Число float может иметь только 18 значимых символов. Так, в данном случае используются только два символа - 3.9. И если число слишком велико или слишком мало, то мы можем записывать число в подобной нотации, используя экспоненту. Число после экспоненты указывает степень числа 10, на которое надо умножить основное число - 3.9.
+</p>
+
+<p><h3>Строки</h3>
+</p>
+
+<p>Тип <b>str</b> представляет строки. Строка представляет последовательность символов, заключенную в одинарные или двойные кавычки, например "hello" и 'hello'. В Python 3.x строки представляют набор символов в кодировке Unicode
+</p>
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> <div class="ctd">2</div> 
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="plain">name</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="string">"Masha"</code> 		
+
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">name</code>
+			<code class="plain">)</code>
+			<code>&nbsp </code>
+			<code class="comment">  # Masha</code> 
+		</div>
+		
+		
+	
+	</td>	
+	</tr>
+</table>
+
+<p><h3>Динамическая типизация</h3>
+</p>
+
+<p>С помощью встроенной функции <b>type()<b> динамически можно узнать текущий тип переменной:</p>
+
+<table class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tr class ="t1">
+	<td  class ="td1"> 
+		<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> <div class="ctd">5</div> 
+	</td>
+	</td>
+	<td class ="td1">
+	
+		<div>
+			<code class="plain">a</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="string">"m"</code>
+			<code>&nbsp</code>
+			<code class="comment"> # тип str</code>
+
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="functions">type</code>
+			<code class="plain">(</code>
+			<code class="plain">a</code>
+			<code class="plain">)</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # class 'str' </code> 
+		</div>
+		<div>
+			<code> &nbsp </code> 
+		</div>
+		<div>
+			<code class="plain">a</code> 
+			<code class="plain"> </code>
+			<code class="keyword">=</code>
+			<code class="plain"> </code> 
+			<code class="value">1234</code>
+			<code>&nbsp</code>
+			<code class="comment"> # тип int</code>
+
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="functions">type</code>
+			<code class="plain">(</code>
+			<code class="plain">a</code>
+			<code class="plain">)</code>
+			<code class="plain">) </code>
+			<code>&nbsp </code>
+			<code class="comment">  # class 'int' </code> 
+		</div>
+		
+	
+	</td>	
+	</tr>
+</table>
+
+
+<p>
+<button class="double1-border-button" onClick="window.location.href='les1.html'">
+Урок1.Введение
+</button>
+<button class="double2-border-button" onClick="window.location.href='les3.html'">
+Урок3.Ввод и вывод
+</button>
+</p>
+
+
+
+<table width = 100%,height = 50%, height = 5%, border = 0>
+<td height = 20%>
+
+<td>
+</table>
+</body>
+<html>

@@ -1,0 +1,1101 @@
+<html>
+
+<body background = 'background1.png', width = 100%, alink = 'blue', link ='blue' , vlink = 'blue'>
+<table width = 100%, height = 15%>
+<td background = 'background4.png'>
+<h1 align = center>Python</h1>
+</td>
+</table>
+
+ 
+<table width = 100%,height = 50%, background = #11111, border = 0, table-layout = fixed>
+<td width = 5%></td>
+<td width = 15%, align = center><h2>Содержание</h2></td>
+<td width = 5%></td>
+<td width =45, align = center><h2>Уроки по изучению языка программирования Python</h2></td>
+<td width = 5%></td>
+
+
+
+<tr>
+<td></td>
+<td  background = 'background4.png', height = 2%, valign = top>
+
+<font face = 'Georgia'>
+<ol>
+	<li><a href = 'index.html', color=blue> Главная страница </a></li>
+	<li><a href = 'les1.html'>Урок1.Введение в написание программ</a></li>
+	<li><a href = 'les2.html'>Урок2.Переменные и типы данных</a></li>
+	<li><a href = 'les3.html'>Урок3.Консольный ввод и вывод</a></li>
+	<li><a href = 'les4.html'>Урок4.Арифметические операции</a></li>
+	<li><a href = 'les5.html'>Урок5.Условные выражения</a></li>
+	<li><a href = 'les6.html'>Урок6.Условная конструкция</a></li>
+	<li><a href = 'les7.html'>Урок7.Циклы</a></li>
+	<li><a href = 'les8.html'>Урок8.Списки</a></li>
+	<li><a href = 'oge.html'>Решение задач ОГЭ</a></li>
+	<li><a href = 'ege.html'>Решение задач ЕГЭ</a></li>
+</ol>
+</font>
+</td>
+
+<td>
+</td>
+
+                              
+<td align = justify  > <font face = 'Georgia'>
+<p><h3>Списки</h3>
+</p>
+<head>
+<link rel = 'stylesheet' href = 'probcss.css'>
+</head>
+
+<p>Для работы с наборами данных Python предоставляет такие встроенные типы как списки, кортежи и словари.</p>
+<p>Список (list) представляет тип данных, который хранит набор или последовательность элементов. Во многих языках программирования есть аналогичная структура данных, которая называется массив.</p>
+
+<p><h3>Создание списка</h3></p>
+
+<p>Для создания списка применяются квадратные скобки <b>[]</b>, внутри которых через запятую перечисляются элементы списка. Например, определим список чисел:</p>
+
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">numbers</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="value">1</code><code class="plain">,</code>
+			<code class="value">2</code><code class="plain">,</code>
+			<code class="value">3</code><code class="plain">,</code>
+			<code class="value">4</code><code class="plain">,</code>
+			<code class="value">5</code>
+			<code class="plain">]</code>
+		</div>
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+
+<p>Подобным образом можно определять списки с данными других типов, например, определим список строк:</p>
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">numbers</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="string">"Tom"</code><code class="plain">,</code>
+			<code class="string">"Sam"</code><code class="plain">,</code>
+			<code class="string">"Bob"</code>
+			<code class="plain">]</code>
+		</div>
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	
+<p>Также для создания списка можно использовать функцию-конструктор <b>list()</b>:</p>
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">numbers1</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code><code class="plain">]</code>
+		</div>
+		<div>
+			<code class="plain">numbers2</code>
+			<code class="keyword">=</code> 
+			<code class="functions">list</code><code class="plain">(</code><code class="plain">)</code>
+		</div>
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+<p>Оба этих определения списка аналогичны - они создают пустой список.</p>
+
+<p>Список необязательно должен содержать только однотипные объекты. Мы можем поместить в один и тот же список одновременно строки, числа, объекты других типов данных.</p>
+<p>Для проверки элементов списка можно использовать стандартную функцию print, которая выводит содержимое списка в удобочитаемом виде.</p>
+<p>Конструктор list может принимать набор значений, на основе которых создается список:</p>
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> <div class="ctd">5</div> <div class="ctd">6</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">numbers1</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="value">1</code><code class="plain">,</code>
+			<code class="value">2</code><code class="plain">,</code>
+			<code class="value">3</code><code class="plain">,</code>
+			<code class="value">4</code><code class="plain">,</code>
+			<code class="value">5</code>
+			<code class="plain">]</code>
+		</div>
+		<div>
+			<code class="plain">numbers2</code>
+			<code class="keyword">=</code> 
+			<code class="functions">list</code><code class="plain">(</code>
+			<code class="plain">numbers1</code>
+			<code class="plain">)</code>
+		</div>
+		<div>
+			<code class="functions">print</code><code class="plain">(</code>
+			<code class="plain">numbers2</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # [1, 2, 3, 4, 5]</code>
+		</div>
+		<div>
+			&nbsp
+		</div>
+		<div>
+			<code class="plain">letters</code>
+			<code class="keyword">=</code> 
+			<code class="functions">list</code><code class="plain">(</code>
+			<code class="string">"Hello"</code>
+			<code class="plain">)</code>
+		</div>
+		<div>
+			<code class="functions">print</code><code class="plain">(</code>
+			<code class="plain">letters</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # ['H', 'e', 'l', 'l', 'o']</code>
+		</div>
+		
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+
+<p>Если необходимо создать список, в котором повторяется одно и то же значение несколько раз, то можно использовать символ звездочки *, то есть фактически применить операцию умножения к уже существующему списку:</p>
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">numbers</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="value">5</code>
+			<code class="plain">]</code>
+			<code class="keyword">*</code>
+			<code class="value">6</code>
+			<code class="comment">&nbsp # 6 раз повторяем 5</code>
+		</div>
+		<div>
+			<code class="functions">print</code><code class="plain">(</code>
+			<code class="plain">numbers2</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # [5, 5, 5, 5, 5, 5]</code>
+		</div>
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+<p><h3>Обращение к элементам списка</h3></p>
+
+<p>Для обращения к элементам списка надо использовать индексы, которые представляют номер элемента в списка. Индексы начинаются с нуля. То есть первый элемент будет иметь индекс 0, второй элемент - индекс 1 и так далее. Для обращения к элементам с конца можно использовать отрицательные индексы, начиная с -1. То есть у последнего элемента будет индекс -1, у предпоследнего - -2 и так далее.</p>
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> <div class="ctd">5</div> <div class="ctd">6</div> <div class="ctd">7</div> <div class="ctd">9</div> <div class="ctd">10</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">people</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="string">"Tom"</code><code class="plain">,</code>
+			<code class="string">"Sam"</code><code class="plain">,</code>
+			<code class="string">"Bob"</code>
+			<code class="plain">]</code>
+		</div>
+		<div>
+			<code class="comment"># получение элементов с начала списка</code>
+		</div>
+		<div>
+			<code class="functions">print</code><code class="plain">(</code>
+			<code class="plain">people</code><code class="plain">[</code><code class="value">0</code><code class="plain">]</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # Tom</code>
+		</div>
+		<div>
+			<code class="functions">print</code><code class="plain">(</code>
+			<code class="plain">people</code><code class="plain">[</code><code class="value">1</code><code class="plain">]</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # Sam</code>
+		</div>
+		<div>
+			<code class="functions">print</code><code class="plain">(</code>
+			<code class="plain">people</code><code class="plain">[</code><code class="value">2</code><code class="plain">]</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # Bob</code>
+		</div>
+		<div>
+			&nbsp
+		</div>
+		<div>
+			<code class="comment"># получение элементов с конца списк</code>
+		</div>
+		<div>
+			<code class="functions">print</code><code class="plain">(</code>
+			<code class="plain">people</code><code class="plain">[</code><code class="value">-2</code><code class="plain">]</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # Sam</code>
+		</div>
+		<div>
+			<code class="functions">print</code><code class="plain">(</code>
+			<code class="plain">people</code><code class="plain">[</code><code class="value">-1</code><code class="plain">]</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # Bob</code>
+		</div>
+		<div>
+			<code class="functions">print</code><code class="plain">(</code>
+			<code class="plain">people</code><code class="plain">[</code><code class="value">0</code><code class="plain">]</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # Tom</code>
+		</div>
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+<p>Для изменения элемента списка достаточно присвоить ему новое значение:</p>
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">people</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="string">"Tom"</code><code class="plain">,</code>
+			<code class="string">"Sam"</code><code class="plain">,</code>
+			<code class="string">"Bob"</code>
+			<code class="plain">]</code>
+		</div>
+		<div>
+			<code class="plain">people</code><code class="plain">[</code><code class="value">1</code><code class="plain">]</code>
+			<code class="keyword">=</code> 
+			<code class="string">"Mike"</code>
+			<code class="comment">&nbsp # изменение второго элемента</code>
+		</div>
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+<p><h3>Перебор элементов</h3></p>
+
+<p>Для перебора элементов можно использовать как цикл for, так и цикл while.</p>
+
+<p>Перебор с помощью цикла <b>for</b>:</p>
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">people</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="string">"Tom"</code><code class="plain">,</code>
+			<code class="string">"Sam"</code><code class="plain">,</code>
+			<code class="string">"Bob"</code>
+			<code class="plain">]</code>
+		</div>
+		<div>
+			<code class="keyword">for</code> 
+			<code class="plain">person</code>
+			<code class="keyword">in</code> 
+			<code class="plain">people:</code>
+		</div>
+		<div>
+			<code class="functions">&nbsp &nbsp print</code><code class="plain">(</code>
+			<code class="plain">person</code>
+			<code class="plain">)</code>
+		</div>
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+<p>Здесь будет производиться перебор списка people, и каждый его элемент будет помещаться в переменную person.</p>
+
+<p>Перебор также можно сделать с помощью цикла <b>while</b>:</p>
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> <div class="ctd">5</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">people</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="string">"Tom"</code><code class="plain">,</code>
+			<code class="string">"Sam"</code><code class="plain">,</code>
+			<code class="string">"Bob"</code>
+			<code class="plain">]</code>
+		</div>
+		<div>
+			<code class="plain">i</code>
+			<code class="keyword">=</code> 
+			<code class="value">0</code>
+		</div>
+		<div>
+			<code class="keyword">while</code> 
+			<code class="plain">i</code>
+			<code class="keyword"><</code>
+			<code class="functions">len</code><code class="plain">(</code><code class="plain">people</code><code class="plain">):</code>
+		
+		</div>
+		<div>
+			<code class="functions">&nbsp &nbsp print</code><code class="plain">(</code>
+			<code class="plain">person</code>
+			<code class="plain">[i])</code>
+			<code class="comment">&nbsp # применяем индекс для получения элемента</code>
+		</div>
+		<div>
+			<code class="plain">&nbsp &nbsp i</code>
+			<code class="keyword">+=</code> 
+			<code class="value">1</code>
+		</div>
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+<p>Для перебора с помощью функции <b>len()</b> получаем длину списка. С помощью счетчика i выводит по элементу, пока значение счетчика не станет равно длине списка.</p>
+
+<p><h3>Методы и функции по работе со списками</h3></p>
+
+<p>Для управления элементами списки имеют целый ряд методов. Некоторые из них:</p>
+
+<ul type="disk">
+	<li>
+		<b>append(item)</b>: добавляет элемент item в конец списка
+	</li>
+	&nbsp
+	<li>
+		<b>insert(index, item)</b>: добавляет элемент item в список по индексу index
+	</li>
+	&nbsp
+	<li>
+		<b>extend(items)</b>: добавляет набор элементов items в конец списка
+	</li>
+	&nbsp
+	<li>
+		<b>remove(item)</b>: удаляет элемент item. Удаляется только первое вхождение элемента. Если элемент не найден, генерирует исключение ValueError
+	</li>
+	&nbsp
+	<li>
+		<b>clear()</b>: удаление всех элементов из списка
+	</li>
+	&nbsp
+	<li>
+		<b>index(item)</b>: возвращает индекс элемента item. Если элемент не найден, генерирует исключение ValueError
+	</li>
+	&nbsp
+	<li>
+		<b>pop([index])</b>: удаляет и возвращает элемент по индексу index. Если индекс не передан, то просто удаляет последний элемент.
+	</li>
+	&nbsp
+	<li>
+		<b>count(item)</b>: возвращает количество вхождений элемента item в список.
+	</li>
+	&nbsp
+	<li>
+		<b>sort([key])</b>: сортирует элементы. По умолчанию сортирует по возрастанию. Но с помощью параметра key мы можем передать функцию сортировки.
+	</li>
+	&nbsp
+	<li>
+		<b>reverse()</b>: расставляет все элементы в списке в обратном порядке.
+	</li>
+	&nbsp
+	<li>
+		<b>copy()</b>: копирует список
+	</li>
+</ul>
+
+<p>Кроме того, Python предоставляет ряд встроенных функций для работы со списками:</p>
+
+<ul type="disk">
+	<li>
+		<b>len(list)</b>: возвращает длину списка
+	</li>
+	&nbsp
+	<li>
+		<b>sorted(list, [key])</b>: возвращает отсортированный список
+	</li>
+	&nbsp
+	<li>
+		<b>min(list)</b>: возвращает наименьший элемент списка
+	</li>
+	&nbsp
+	<li>
+		<b>max(list)</b>: возвращает наибольший элемент списка
+	</li>
+</ul>
+
+
+<p><h3>Добавление и удаление элементов</h3></p>
+
+<p>Для добавления элемента применяются методы append(), extend и insert, а для удаления - методы remove(), pop() и clear().</p>
+
+<p>Использование методов:</p>
+
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> <div class="ctd">5</div> <div class="ctd">6</div> <div class="ctd">7</div> <div class="ctd">8</div> <div class="ctd">9</div> <div class="ctd">10</div> <div class="ctd">11</div> <div class="ctd">12</div> <div class="ctd">13</div> <div class="ctd">14</div> <div class="ctd">15</div> <div class="ctd">16</div> <div class="ctd">17</div> <div class="ctd">18</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">people</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="string">"Tom"</code><code class="plain">,</code>
+			<code class="string">"Bob"</code>
+			<code class="plain">]</code>
+		</div>
+		<div>
+			&nbsp
+		</div>
+		<div>
+			<code class="comment"> # добавляем в конец списка</code>
+		</div>
+		<div>
+			<code class="plain">people.append</code>
+			<code class="plain">(</code>
+			<code class="string">"Alice"</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # ["Tom", "Bob", "Alice"]</code>
+		</div>
+		<div>
+			<code class="comment"> # добавляем на вторую позицию</code>
+		</div>
+		<div>
+			<code class="plain">people.insert</code>
+			<code class="plain">(</code>
+			<code class="value">1</code><code class="plain">,</code>
+			<code class="string">"Bill"</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # ["Tom", "Bill", "Bob", "Alice"]</code>
+		</div>
+		<div>
+			<code class="comment"> # добавляем набор элементов ["Mike", "Sam"]</code>
+		</div>
+		<div>
+			<code class="plain">people.extend</code>
+			<code class="plain">(</code>
+			<code class="plain">[</code>
+			<code class="string">"Mike"</code><code class="plain">,</code>
+			<code class="string">"Sam"</code>
+			<code class="plain">]</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # ["Tom", "Bill", "Bob", "Alice", "Mike", "Sam"]</code>
+		</div>
+		<div>
+			<code class="comment"> # получаем индекс элемента</code>
+		</div>
+		<div>
+			<code class="plain">index_tom</code>
+			<code class="keyword">=</code> 
+			<code class="plain">people.index(</code>
+			<code class="string">"Tom"</code>
+			<code class="plain">)</code>
+		</div>
+		<div>
+			<code class="comment"> # удаляем по этому индексу</code>
+		</div>
+		<div>
+			<code class="plain">removed_item</code>
+			<code class="keyword">=</code> 
+			<code class="plain">people.pop(</code>
+			<code class="plain">people.index</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # ["Bill", "Bob", "Alice", "Mike", "Sam"]</code>
+		</div>
+		<div>
+			<code class="comment"> # удаляем последний элемент</code>
+		</div>
+		<div>
+			<code class="plain">last_item</code>
+			<code class="keyword">=</code> 
+			<code class="plain">people.pop()</code>
+			<code class="comment">&nbsp # ["Bill", "Bob", "Alice", "Mike"]</code>
+		</div>
+		<div>
+			<code class="comment"> # удаляем элемент "Alice"</code>
+		</div>
+		<div>
+			<code class="plain">people.remove</code>
+			<code class="plain">(</code>
+			<code class="string">"Alice"</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # ["Bill", "Bob", "Mike"]</code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">people</code>
+			<code class="plain">)</code>
+		</div>
+		<div>
+			<code class="comment"> # удаляем все элементы</code>
+		</div>
+		<div>
+			<code class="plain">people.clear()</code>
+		</div>
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+<p><h3>Проверка наличия элемента</h3></p>
+
+<p>Если определенный элемент не найден, то методы remove и index генерируют исключение. Чтобы избежать подобной ситуации, перед операцией с элементом можно проверять его наличие с помощью ключевого слова <b>in</b>:
+</p>
+
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> <div class="ctd">5</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">people</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="string">"Tom"</code><code class="plain">,</code>
+			<code class="string">"Bob"</code><code class="plain">,</code>
+			<code class="string">"Alice"</code><code class="plain">,</code>
+			<code class="string">"Sam"</code>
+			<code class="plain">]</code>
+		</div>
+		<div>
+			&nbsp
+		</div>
+		<div>
+			<code class="keyword">if</code>
+			<code class="string">"Alice"</code>	
+			<code class="keyword">in</code>
+			<code class="plain">people:</code>
+		</div>
+		<div>
+			<code class="plain">&nbsp &nbsp people.remove:</code>
+			<code class="plain">(</code>
+			<code class="string">"Alice"</code>
+			<code class="plain">)</code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">people</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # ["Tom", "Bob", "Sam"]</code>
+		</div>
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+<p>
+Выражение <code>if "Alice" in people</code> возвращает True, если элемент "Alice" имеется в списке people. Поэтому конструкция <code>if "Alice" in people</code> может выполнить последующий блок инструкций в зависимости от наличия элемента в списке.
+</p>
+
+<p><h3>Удаление с помощью del</h3></p>
+
+<p>Python также поддерживает еще один способ удаления элементов списка - с помощью оператора <b>del</b>. В качестве параметра этому оператору передается удаляемый элемент или набор элементов:</p>
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> <div class="ctd">5</div> <div class="ctd">6</div> <div class="ctd">7</div> <div class="ctd">8</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">people</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="string">"Tom"</code><code class="plain">,</code>
+			<code class="string">"Bob"</code><code class="plain">,</code>
+			<code class="string">"Sam"</code><code class="plain">,</code>
+			<code class="string">"Alice"</code><code class="plain">,</code>
+			<code class="string">"Bill"</code><code class="plain">,</code>
+			<code class="string">"Kate"</code>
+			<code class="string">"Mike"</code>
+			<code class="plain">]</code>
+		</div>
+		<div>
+			&nbsp
+		</div>
+		<div>
+			<code class="keyword">del</code>
+			<code class="plain">people</code>
+			<code class="plain">[</code>
+			<code class="value">1</code>
+			<code class="plain">]</code>
+			<code class="comment">&nbsp # удаляем второй элемент</code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">people</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # ["Tom", "Alice", "Sam", "Bill", "Kate", "Mike"]</code>
+		</div>
+		<div>
+			<code class="keyword">del</code>
+			<code class="plain">people</code>
+			<code class="plain">[</code>
+			<code class="value">:3</code>
+			<code class="plain">]</code>
+			<code class="comment">&nbsp # удаляем  по четвертый элемент не включая</code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">people</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # ["Bill", "Kate", "Mike"]</code>
+		</div>
+		<div>
+			<code class="keyword">del</code>
+			<code class="plain">people</code>
+			<code class="plain">[</code>
+			<code class="value">1:</code>
+			<code class="plain">]</code>
+			<code class="comment">&nbsp # удаляем  со второго элемента</code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">people</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # ["Bill"]</code>
+		</div>
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+
+<p><h3>Подсчет вхождений</h3></p>
+<p>Если необходимо узнать, сколько раз в списке присутствует тот или иной элемент, то можно применить метод count():</p>
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">people</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="string">"Tom"</code><code class="plain">,</code>
+			<code class="string">"Bob"</code><code class="plain">,</code>
+			<code class="string">"Alice"</code><code class="plain">,</code>
+			<code class="string">"Tom"</code><code class="plain">,</code>
+			<code class="string">"Bill"</code><code class="plain">,</code>
+			<code class="string">"Tom"</code>
+			<code class="plain">]</code>
+		</div>
+		<div>
+			&nbsp
+		</div>
+		<div>
+			<code class="plain">people_count</code>
+			<code class="keyword">=</code>
+			<code class="plain">people.count</code><code class="plain">(</code><code class="string">"Tom"</code><code class="plain">)</code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">people_count</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # 3</code>
+		</div>
+		
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+<p><h3>Сортировка</h3></p>
+
+<p>Для сортировки по возрастанию применяется метод <b>sort()</b>:</p>
+
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">people</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="string">"Tom"</code><code class="plain">,</code>
+			<code class="string">"Bob"</code><code class="plain">,</code>
+			<code class="string">"Alice"</code><code class="plain">,</code>
+			<code class="string">"Sam"</code><code class="plain">,</code>
+			<code class="string">"Bill"</code><code class="plain">,</code>
+			<code class="plain">]</code>
+		</div>
+		<div>
+			&nbsp
+		</div>
+		<div>
+			<code class="plain">people.sort()</code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">people</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # ["Alice", "Bill", "Bob", "Sam", "Tom"]</code>
+		</div>
+		
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+<p>Если необходимо отсортировать данные в обратном порядке, то мы можем после сортировки применить метод reverse():</p>
+
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div>  <div class="ctd">5</div>
+	</td>
+		<td>
+		<div>
+			<code class="plain">people</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="string">"Tom"</code><code class="plain">,</code>
+			<code class="string">"Bob"</code><code class="plain">,</code>
+			<code class="string">"Alice"</code><code class="plain">,</code>
+			<code class="string">"Sam"</code><code class="plain">,</code>
+			<code class="string">"Bill"</code><code class="plain">,</code>
+			<code class="plain">]</code>
+		</div>
+		<div>
+			&nbsp
+		</div>
+		<div>
+			<code class="plain">people.sort()</code>
+		</div>
+		<div>
+			<code class="plain">people.reverse()</code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">people</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # ["Tom", "Sam", "Bob", "Bill", "Alice"]</code>
+		</div>
+		
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+
+<p>При сортировке фактически сравниваются два объекта, и который из них "меньше", ставится перед тем, который "больше". Понятия "больше" и "меньше" довольно условны. И если для чисел все просто - числа расставляются в порядке возрастания, то для строк и других объектов ситуация сложнее. В частности, строки оцениваются по первым символам. Если первые символы равны, оцениваются вторые символы и так далее. При чем цифровой символ считается "меньше", чем алфавитный заглавный символ, а заглавный символ считается меньше, чем строчный.</p>
+
+
+<p>Таким образом, если в списке сочетаются строки с верхним и нижним регистром, то мы можем получить не совсем корректные результаты, так как для нас строка "bob" должна стоять до строки "Tom". И чтобы изменить стандартное поведение сортировки, мы можем передать в метод sort() в качестве параметра функцию:
+</p>
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div>  <div class="ctd">5</div>
+	</td>
+		<td>
+		<div>
+			<code class="plain">people</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="string">"Tom"</code><code class="plain">,</code>
+			<code class="string">"bob"</code><code class="plain">,</code>
+			<code class="string">"alice"</code><code class="plain">,</code>
+			<code class="string">"Sam"</code><code class="plain">,</code>
+			<code class="string">"Bill"</code><code class="plain">,</code>
+			<code class="plain">]</code>
+		</div>
+		<div>
+			&nbsp
+		</div>
+		<div>
+			<code class="plain">people.sort()</code>
+			<code class="comment">&nbsp # стандартная сортировка</code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">people</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # ["Bill", "Sam", "Tom", "alice", "bob"]</code>
+		</div>
+		<div>
+			<code class="plain">people.sort</code>
+			<code class="plain">(</code>
+			<code class="plain">key</code>
+			<code class="keyword">=</code>
+			<code class="functions">str</code><code class="plain">.lower</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp #сортировка без учета регистра</code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">people</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # ["alice", "Bill", "bob", "Sam", "Tom"]</code>
+		</div>
+		
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+
+<p>Кроме метода sort мы можем использовать встроенную функцию <b>sorted</b>, которая имеет две формы:</p>
+<p>
+	<ul type="disk">
+		<li>sorted(list): сортирует список list</li>
+		&nbsp
+		<li>sorted(list, key): сортирует список list, применяя к элементам функцию key</li>
+
+	</ul>	
+</p>
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div>  <div class="ctd">5</div>
+	</td>
+		<td>
+		<div>
+			<code class="plain">people</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="string">"Tom"</code><code class="plain">,</code>
+			<code class="string">"bob"</code><code class="plain">,</code>
+			<code class="string">"alice"</code><code class="plain">,</code>
+			<code class="string">"Sam"</code><code class="plain">,</code>
+			<code class="string">"Bill"</code><code class="plain">,</code>
+			<code class="plain">]</code>
+		</div>
+		<div>
+			&nbsp
+		</div>
+		<div>
+			<code class="plain">sorted_people</code>
+			<code class="plain">(people,</code>
+			<code class="plain">key</code>
+			<code class="keyword">=</code>
+			<code class="functions">str</code><code class="plain">.lower</code>
+			<code class="plain">)</code>
+		</div>
+		<div>
+			<code class="functions">print</code>
+			<code class="plain">(</code>
+			<code class="plain">sorted_people</code>
+			<code class="plain">)</code>
+			<code class="comment">&nbsp # ["alice", "Bill", "bob", "Sam", "Tom"]</code>
+		</div>
+	
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+<p>При использовании этой функции следует учитывать, что эта функция не изменяет сортируемый список, а все отсортированные элементы она помещает в новый список, который возвращается в качестве результата.</p>
+
+
+<p><h3>Минимальное и максимальное значения</h3></p>
+
+
+<p>Встроенный функции Python min() и max() позволяют найти минимальное и максимальное значения соответственно:
+</p>
+
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">num</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+			<code class="value">5</code><code class="plain">,</code>
+			<code class="value">21</code><code class="plain">,</code>
+			<code class="value">6</code><code class="plain">,</code>
+			<code class="value">1</code><code class="plain">,</code>
+			<code class="value">3</code>
+			<code class="plain">]</code>
+		</div>
+		<div>
+			&nbsp
+		</div>
+		<div>
+			<code class="functions">print</code><code class="plain">(</code><code class="functions">min</code><code class="plain">(</code><code class="plain">num</code><code class="plain">)</code><code class="plain">)</code>
+			<code class="comment">&nbsp # 1</code>
+		</div>
+		<div>
+			<code class="functions">print</code><code class="plain">(</code><code class="functions">max</code><code class="plain">(</code><code class="plain">num</code><code class="plain">)</code><code class="plain">)</code>
+			<code class="comment">&nbsp # 21</code>
+		</div>
+	
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+
+
+<p><h3>Списки списков</h3></p>
+
+<p>Списки кроме стандартных данных типа строк, чисел, также могут содержать другие списки. Подобные списки можно ассоциировать с таблицами, где вложенные списки выполняют роль строк. Например:</p>
+
+<table  class ="tb" border="1" cellpadding="0" cellspacing="0">
+	<tbody> <tr  class ="t1" >
+	<td  class ="td1"> 
+	<div class="ctd">1</div> <div class="ctd">2</div> <div class="ctd">3</div> <div class="ctd">4</div>  <div class="ctd">5</div>  <div class="ctd">6</div>  <div class="ctd">7</div>  <div class="ctd">8</div>  <div class="ctd">9</div> 
+	</td>
+		<td>
+		<div>
+			<code class="plain">people</code>
+			<code class="keyword">=</code> 
+			<code class="plain">[</code>
+		</div>
+		<div>
+		
+			<code class="plain">&nbsp &nbsp [</code>
+			<code class="string">"Tom"</code><code class="plain">,</code>
+			<code class="value">29</code> 
+			<code class="plain">],</code>
+		</div>
+		<div>
+		
+			<code class="plain">&nbsp &nbsp [</code>
+			<code class="string">"Alice"</code><code class="plain">,</code>
+			<code class="value">33</code> 
+			<code class="plain">],</code>
+		</div>
+		<div>
+		
+			<code class="plain">&nbsp &nbsp [</code>
+			<code class="string">"Bob"</code><code class="plain">,</code>
+			<code class="value">27</code> 
+			<code class="plain">],</code>
+		</div>
+		<div>
+			<code class="plain">],</code>
+		</div>
+		<div>
+			&nbsp
+		</div>
+		<div>
+			<code class="functions">print</code><code class="plain">(</code><code class="plain">[</code><code class="value">0</code><code class="plain">]</code><code class="plain">)</code>
+			<code class="comment">&nbsp # ["Tom", 29]</code>
+		</div>
+		<div>
+			<code class="functions">print</code><code class="plain">(</code><code class="plain">[</code><code class="value">0</code><code class="plain">]</code><code class="plain">[</code><code class="value">0</code><code class="plain">]</code><code class="plain">)</code>
+			<code class="comment">&nbsp # Tom</code>
+		</div>
+		<div>
+			<code class="functions">print</code><code class="plain">(</code><code class="plain">[</code><code class="value">0</code><code class="plain">]</code><code class="plain">[</code><code class="value">1</code><code class="plain">]</code><code class="plain">)</code>
+			<code class="comment">&nbsp # 29</code>
+		</div>
+		</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+
+
+<p>Чтобы обратиться к элементу вложенного списка, необходимо использовать пару индексов: people[0][1] - обращение ко второму элементу первого вложенного списка.</p>
+
+<p>Добавление, удаление и изменение общего списка, а также вложенных списков аналогично тому, как это делается с обычными (одномерными) списками:</p>
+
+
+<p>
+<button class="double1-border-button" onClick="window.location.href='les7.html'">
+Урок7.Циклы
+</button>
+<button class="double2-border-button" onClick="window.location.href='oge.html'">
+Решение задач ОГЭ
+</button>
+</p>
+
+
+
+
+
+
+<table width = 100%,height = 50%, height = 5%, border = 0>
+<td height = 20%>
+
+<td>
+</table>
+</body>
+<html>

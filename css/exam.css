@@ -1,0 +1,60 @@
+.header-background {
+  position: relative; /* Важно для абсолютного позиционирования overlay */
+  width: 100%;
+  height: 800px; /* Или другая высота, соответствующая вашему изображению */
+  overflow: hidden;
+}
+
+.header-background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Прозрачный черный фон */
+  z-index: 1; /* Overlay поверх фона */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Распределяем элементы по вертикали */
+  padding: 0px;
+}
+
+
+.header-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-icons img {
+  width: 50px; /* Настройте размер по необходимости */
+  height: auto;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu li {
+  margin: 0 10px;
+}
+
+.main-menu a {
+  color: white;
+  text-decoration: none;
+}
+

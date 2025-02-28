@@ -1,0 +1,126 @@
+main {
+  display: flex;
+  overflow: hidden;
+}
+.hr{
+	content: "";
+	display: block;
+	height: 2px;
+	width: 130px;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	/*background: red;*/
+	
+	border-top: 40px solid #F0E3A0;
+	height: 2px;*/
+}
+
+.info-block {
+	weight: 200px;
+	border-top: 3px solid #F0E3A0; 
+  flex: 1;
+  padding: 100px;
+  background-color: #0B1D27; /* Новый цвет фона */
+  color: white; /* Добавлено для лучшей читаемости текста на тёмном фоне */
+}
+
+.photo-block1 {
+    /*width: 50%;*/
+    height: 50%;
+    background-size: cover;
+    background-position: right ;
+    background-repeat: no-repeat;
+    /* flex: 1; */
+    min-height: 250px;
+    /* position: relative; */
+    /* border-radius: 500px; */
+    border-top-left-radius: 60%;
+    overflow: hidden;
+    border-bottom-left-radius: 60%;
+}
+.photo-block2 {
+    /*width: 50%;*/
+    height: 50%;
+    background-size: cover;
+    background-position: left ;
+    background-repeat: no-repeat;
+    /* flex: 1; */
+    min-height: 250px;
+    /* position: relative; */
+    /* border-radius: 500px; */
+    border-top-right-radius: 60%;
+    overflow: hidden;
+    border-bottom-right-radius: 60%;
+}
+/* .photo-block {
+   width: 67%;
+  height: 67%;
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  flex: 1;
+  min-height: 250px;
+  position: relative;
+  border-radius: 500px; /* Радиус закругления углов 
+  overflow: hidden;  Скрывает переполнение за границами закругления 
+}*/
+
+/* Отступы от header */
+
+----------------------------------------------------------------------
+/*body {
+  margin-top: 0; /* Удаляем стандартный margin-top 
+  }
+
+main {
+  margin-top: 100px; /* Отступ сверху 
+  margin-bottom: 20px; /*Отступ снизу
+}
+.main div{
+  
+  margin-top: 100px; /* Отступ сверху 
+  margin-bottom: 20px; /*Отступ снизу
+  background-color: #0B1D27;*/
+	
+	
+}
+
+
+
+/* main {
+	flex: 1; /* Занимает всё оставшееся место
+  padding-bottom: 20px; /* Отступ для футера 
+  display: flex; /* Размещаем элементы в ряд 
+  height: 250px; /* Высота main-блока 
+  overflow: hidden; /* Скрываем переполнение 
+}
+
+.info-block {
+  flex: 1; /* Занимает доступное пространство 
+  padding: 30px; /* Отступы слева и сверху 
+  background-color: #f0f0f0;  Цвет фона блока информации /
+}
+
+.photo-block {
+  background-image: url("your-image.jpg");
+  background-size: cover;
+  background-position: right center; /* Позиционирование /
+  background-repeat: no-repeat;
+  -webkit-clip-path: ellipse(70% 70% at 80% 50%);
+  clip-path: ellipse(70% 70% at 80% 50%);
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.photo-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+ */

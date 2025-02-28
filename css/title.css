@@ -1,0 +1,102 @@
+/*.title{
+	overflow: hidden;
+	text-align: center;
+	font-size: 30px;
+	
+}
+/* .title span{
+	display: inline-block;
+	vertical-align:middle;
+	
+}
+.title:before,
+.title:after{
+	
+	content:"";
+	display: inline-block;
+	vertical-align:middle;
+	width: 100%;
+	height: 4px;
+	background-color: red;
+	position: relative;
+	
+}
+.title:after{
+	
+	margin-right: -100%;
+	right: -14px;
+} */
+.yellow-line {
+  height: 2px;
+  background-color: gold;
+  margin-top: 5px;
+}
+
+.travel-text {
+  color: #F0E3A0;
+  margin-bottom: 10px; /*Отступ от полоски*/
+}
+.logo{
+	width: 150px; 
+    height: auto; 	
+	
+}
+#wrapper {
+    position: absolute;
+    top: 10px;
+    /*left: 10px;*/
+    z-index: 1;
+}
+
+#wrapper img {
+  width: 250px;
+  height: auto;
+}
+
+#avatar {
+    position: absolute;
+    top: 2em;
+    margin-left: 88em;
+    z-index: 1;
+}
+
+#avatar img {
+  width: 60px;
+  height: auto;
+}
+
+footer {
+  display: flex; /* Делаем footer flex-контейнером */
+  justify-content: space-around; /* Равномерно распределяем элементы */
+  background-color: #00121C; /* Цвет фона футера */
+  font-family: Montserrat, sans-serif;
+  color: #fff; /* Цвет текста */
+  font-size: 15px; /* Размер текста */
+  padding: 25px; /* Отступ внутри футера */
+}
+
+footer > div {
+  width: 45%; /* Ширина каждого блока (можно настроить) */
+  box-sizing: border-box; /* Учитываем padding */
+  padding: 10px; /* Отступ внутри блока */
+  text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.listfoot {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.listfoot > li {
+  margin-bottom: 10px;
+}
+
+.listfoot > li a {
+  text-decoration: none;
+  color: inherit; /* Цвет ссылок наследуется от родителя */
+}
+
+footer h4 {
+  margin-bottom: 10px; /* Отступ под заголовком */
+}

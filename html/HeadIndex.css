@@ -1,0 +1,44 @@
+body {
+  background-color: red;
+}
+.header {
+  display: grid;
+  grid-template-rows: 1fr; /* 1 строка */
+  grid-template-columns: 1fr; /* 1 столбец */
+  position: relative;
+  height: 200px;
+}
+
+.header img {
+  grid-row: 1;
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-menu {
+  grid-row: 1;
+  grid-column: 1;
+  z-index: 1; /* Убедитесь, что меню находится над фоном */
+  /* Остальные стили для меню, как в предыдущих примерах */
+  text-align: center;
+  position: relative; /* нужно для позиционирования внутри grid-ячейки */
+  top: 50px; /* Пример:  Опустим меню на 50px */
+}
+
+.main-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.main-menu a {
+  color: white;
+  text-decoration: none;
+}

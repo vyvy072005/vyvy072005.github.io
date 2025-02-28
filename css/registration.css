@@ -1,0 +1,196 @@
+.registration-block {
+	
+	    display: flex;
+    width: 60em;
+    height: 35em;
+    max-width: 600em;
+    margin: 50em auto;
+    border-radius: 3em;
+    overflow: hidden;
+  z-index: 1; /* Устанавливаем z-index, чтобы блок был выше других */
+}
+
+.white-section {
+	
+  background-color: white;
+  /*padding: 10em;*/
+  width: 35em;
+  height: auto; /* пример, высота белой части */
+}
+.white-section > h2{
+	color: #F0E3A0;
+	font-family: Montserrat, sans-serif;	
+  font-size: 3em;
+  padding-top: 0px ;
+  padding-left: 25px;
+}
+
+
+.blue-section {
+	
+    
+	background: linear-gradient(to bottom, rgba(11, 29, 39, 0.8), rgba(11, 29, 39, 0.8));
+ /* background-color: #0B1D27; /* Пример синего цвета */
+ /* padding: 100em;*/
+  width: 50em;
+  height: auto; /* пример, высота синей части */
+    
+    
+}
+.blue-section > div{
+	font-family: Montserrat, sans-serif;	
+  font-size: 2em;
+  margin-top: 30%;
+  
+    padding-right: 50px;
+    padding-left: 40px;
+
+}
+
+
+.registration-block {
+  /*width: 100em; 
+  color: #F0E3A0;
+  font-family: Montserrat, sans-serif;
+  font-size: 1em;
+  padding: 20px; 
+  text-align: left;
+  border: 1px solid #ccc; 
+  border-radius: 5px; */
+   
+   
+  
+}
+
+
+.registration-block form {
+	flex:1;
+  gap: 0px; /* Зазор между элементами */
+  /*width: 100%; /* Форма занимает всю ширину блока */
+   /*width:100em;*/
+	color: #F0E3A0;
+	font-family: Montserrat, sans-serif;	
+  font-size: 1em;
+  height: 20px;
+  width: 500px;
+  padding-left: 20px;
+  padding-top: 0px;
+  text-align:left;
+  margin-bottom: 20px;
+  
+}
+
+.registration-block label {
+  display: block; /* Label занимает всю ширину */
+  margin-bottom: 0.1em; /* Отступ снизу от label */
+}
+
+.registration-block form input {
+  width: 90%; /* Поля ввода занимают всю ширину формы */
+  height: 10%;
+  box-sizing: border-box;
+  padding: 1em;
+  margin-bottom: 1em;
+  border: 1px solid #ccc;
+  font-size: 1em;
+  border-radius: 5px; /* Добавил закругление углов */
+}
+
+
+.registration-block form input:focus { /* Стиль при фокусе */
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/*.header-content button[name="reg"]{
+	 
+  background-color: transparent; /* Фон прозрачный */
+  /*border: 1px solid white; /* Белая граница 
+  color: white; /* Белый текст 
+  font-family: Montserrat, sans-serif;
+  margin-right: 0%;
+  padding: 15px 55px;
+  font-size: 1.1em;
+  cursor: pointer;
+}*/
+
+
+.header-content button[name="reg"] {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  margin-right: 0%;
+  padding: 15px 55px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+ .header-content button[name="reg"]:hover {
+   
+     box-shadow: 0 0 10px 5px rgba(255,255,255,0.3), inset 0 0 5px rgba(255,255,255,0.2);
+   }
+
+.header-content button[name="reg"]:active {
+  background-color: rgba(255,255,255,0.3);
+  border-color: #white;
+  color: #white;
+  transform: translateY(2px);
+}
+
+
+/*.registration-block form{
+    width:100em;
+	color: #F0E3A0;
+	font-family: Montserrat, sans-serif;	
+  font-size: 1em;
+  height: 20px;
+  width: 500px;
+  padding-left: 20px;
+  padding-top: 20px;
+  text-align:left;
+  
+}
+
+
+.registration-block form input[type="email"]{
+    width: 30em;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 1px solid #ccc; /* 1px - ширина, solid - стиль, #ccc - серый цвет */
+   /* color: black;
+    margin: 1em 0;
+    box-sizing: border-box;
+    font-size: 1em;
+	
+   
+
+    margin-bottom: 50px;
+    margin-top: 0px;
+
+
+}
+.registration-block form input[type="password"]{
+    width: 30em;
+    margin-bottom: 1em;
+    padding: 1em;
+    border: 1px solid #ccc; /* 1px - ширина, solid - стиль, #ccc - серый цвет 
+   /* color: black;
+    margin: 1em 0;
+    box-sizing: border-box;
+    font-size: 1em;
+	
+   
+
+    
+    border-top-width: 1px;
+    margin-top: 50px;
+    padding-bottom: 16px;
+    margin-bottom: 50px;
+
+
+}*/
+
+

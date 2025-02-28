@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Пример</title>
+  <style>
+    body {
+      color: #8f8f8f;
+      font: 50px Tahoma, sans-serif;
+      background-color: #f8f8f8;
+      border-top: 5px solid #7e7e7e;
+      margin: 0;
+    }
+	
+.header-background {
+  position: relative;
+  width: 100%;
+ /* width: 100vw;*/
+  overflow: hidden;
+ 
+ 
+}
+
+.header-background img {
+  /*width: 100vw; /* Занимает всю ширину экрана */
+  width: 100%;
+  height: auto;
+  display: block;
+}
+    input[type="text"] {
+      background-color: #f3f3f3;
+      border: 1px solid #e7e7e7;
+      height: 30px;
+      color: #b2b2b2;
+      padding: 0 10px;
+      vertical-align: top;
+    }
+    button {
+      color: #fff;
+      background-color: #29c5e6;
+      border: none;
+      height: 32px;
+      font-family: 'Oswald', sans-serif;
+    }
+    p {
+		
+      margin: 10px 0;
+    }
+    #wrapper {
+      max-width: 960px;
+      margin: auto;
+    }
+    header {
+      padding: 10px 0;	  
+      display: flex; 
+      align-items: center; 
+    }
+	header > a img { /*Размер логотипа*/
+		width: 150px; 
+		height: auto; 	 
+	}
+	
+	
+    nav a {
+      text-decoration: none;//
+    }
+    nav ul {
+      margin: 0;
+      padding: 0;
+      display: inline-block; /* позволяет управлять шириной ul*/
+    }
+    nav li {
+      list-style-position: inside;
+      font: 14px 'Oswald', sans-serif;
+      padding: 10px;
+      display: inline-block; /* Располагаем элементы меню в строку */
+      vertical-align: middle; /* Вертикальное выравнивание */
+    }
+
+    .menu-top li {
+      padding: 10px 30px;
+      margin: 0;
+    }
+
+    /* .menu-top li.active { */
+      /* background: #29c5e6; */
+      /* color: #fff;  */
+    /* } */
+
+    .menu-top a {
+      color: #b2b2b2;
+    }
+    .menu-top img {
+      height: 30px; /* Устанавливаем высоту иконок */
+      width: auto; /* Ширина подстраивается автоматически */
+      vertical-align: middle; /* Вертикальное выравнивание */
+
+    }
+
+    header > a { /* Ссылка с логотипом */
+        margin-right: auto; /* Отступ справа */
+    }
+	
+	#middleInfo{
+		font-family: Montserrat, sans-serif;
+		color: #c3cbb3;
+		font-size: 30px;
+		
+	  list-style-position: inside;
+      font: 14px 'Oswald', sans-serif;
+      padding: 10px;
+      display: inline-block; /* Располагаем элементы меню в строку */
+      vertical-align: middle; /* Вертикальное выравнивание */
+		
+		
+	}
+	
+	#example{
+		font-family: Montserrat, sans-serif;
+		color: #c3cbb3;
+		font-size: 50px;
+		margin: 0, 0px;
+		float:right;
+        width:500px;
+	
+	}
+	#imageIndex{
+		margin-right: auto; 
+		height: 30px; /* Устанавливаем высоту иконок */
+        width: auto; /* Ширина подстраивается автоматически */
+        vertical-align: middle; /* Вертикальное выравнивание */
+	}
+	
+
+
+	.team-city{
+		
+		margin-left:100px;
+	}
+	
+	/*#middleInfo {
+      max-width: 960px;
+      margin: auto;
+	  color: #8f8f8f;
+     /* font: 25px Tahoma, sans-serif;
+	 font: 25px Montserrat, sans-serif;
+      
+      margin: 0;
+    }*/
+	
+	
+	
+	
+	
+    /*header {
+      padding: 10px 0;	  
+      display: flex; 
+      align-items: center; 
+    }
+	header > a img { /*Размер логотипа*/
+		width: 150px; 
+		height: auto; 	 
+	}*/
+	

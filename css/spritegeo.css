@@ -1,0 +1,19 @@
+.geo-icon {
+  width: 32px;
+  height: 32px;
+  background-image: url("../Картинки/geo32spritewhite.png");
+  display: inline-block;
+  cursor: pointer;
+}
+
+.geo-icon.normal {
+  background-position: 0 0; 
+}
+
+.geo-icon:hover {
+  background-position: -32px 0; 
+}
+
+.geo-icon:active {
+  background-position: -64px 0; 
+}

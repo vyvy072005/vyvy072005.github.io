@@ -2,21 +2,17 @@
 body{
 	
 	background-color: #0B1D27;
-	max-width: 100%;
-	height: auto;
-	/*max-width: 100%;*/
-	/*max-width: 1800px;
-	width: 100%;*/
+	max-width: 100em;
 	padding: 0 auto;
 	margin: 0 auto;
 }
 
- .header-background {
+.header-background {
 	 
 	
- position: relative;
- width: 150%;
- 
+	position: relative;
+	width: 100%;
+	overflow: hidden;
  
  
 }
@@ -32,8 +28,7 @@ body{
   position: absolute;
   top: 0;
   left: 0;
-  /*width: 100%;*/
-  width: 100vw;
+  width: 95%;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0);
   text-align: center;
@@ -61,7 +56,7 @@ body{
 
 
 .header-content {
-	/*z-index: 1;*/
+	
   position: absolute;
   top: 23em;
   left: 50%;
@@ -71,40 +66,33 @@ body{
 }
 
 .header-content h1 {
-  margin-bottom: 20px;
-  font-size: 3em;
-  
-  font-family: Montserrat, sans-serif;
-    color: white;
-    
+	margin-bottom: 20px;
+	font-size: 3em;
+	font-family: Montserrat, sans-serif;
+	color: white;
 	text-align: left;
 }
 h2{
 	margin-bottom: 20px;
-  font-size: 2em;
-  
-  font-family: Montserrat, sans-serif;
-    color: white;
-    
+	font-size: 2em;
+	font-family: Montserrat, sans-serif;
+	color: white;
 	text-align: left;
 	
 }
 
 p{
 	margin-bottom: 20px;
-  font-size: 1em;
-  
-  font-family: Montserrat, sans-serif;
+	font-size: 1em; 
+    font-family: Montserrat, sans-serif;
     color: white;
-    
-	text-align: left;
+    text-align: left;
 	
 }
 
 .header-content button[name="1"]{
 	font-family: Montserrat, sans-serif;
- 
-  margin-right:80%;
+    margin-right:80%;
     padding: 15px 55px;
     font-size: 1.1em;
     background-color: #fcf0ab;

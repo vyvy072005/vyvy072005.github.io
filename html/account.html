@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+<head>
+	
+	<title>Путешествия</title>
+	<link rel="stylesheet" href="../css/headIndex.css">
+	<link rel="stylesheet" href="../css/indexmain.css">
+	<link rel="stylesheet" href="../css/title.css">
+	<link rel="stylesheet" href="../css/gardient.css">
+	<link rel="stylesheet" href="../css/account.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	
+	<script src="../Scripts/jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+<header>
+  <div class="header-background">
+  <img src="../Картинки/indexPicture.jpg" alt="Фон шапки">
+   <div class="gradient-overlay"></div> 
+  </div>
+ <div id="wrapper">
+ <a href="#" class="icon-link"><img src="../Картинки/logoWhite.png" alt="Иконка"></a> 
+ </div>
+ <div id="avatar">
+ <a href="../html/authorisation.html" class="icon-link"><img src="../Картинки/iconAvatarWhite.png" alt="Аккаунт"></a>
+ </div>
+	
+  <nav class="main-menu">  
+    <ul>	  
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Галерея</a></li>	 
+    </ul>
+  </nav>
+</header>
+
+
+<div class="header-content">
+<div class="profile-block">
+    <div class="info-section">
+	<h2>Личный кабинет</h2>
+		<img id="userAvatar" src="../Картинки/iconAvtor.png" alt="Аватар" width="200">
+       
+        <p> <button class="edit-button" name="edit" onclick="location.href='accountUpdate.html'">Редактировать профиль</button></p>
+     </div>
+
+     <div class="profile-data">
+    <p><strong>Имя:</strong> <span id="username"></span></p>
+    <p><strong>Email:</strong> <span id="useremail"></span></p>
+    <p><strong>Фамилия:</strong> <span id="usersurname"></span></p> <!-- Добавляем span для фамилии -->
+    <p><strong>Дата рождения:</strong> <span id="userbirthdate"></span></p> <!-- Добавляем span для даты рождения -->
+    <p><strong>Город:</strong> <span id="usercity"></span></p> <!-- Добавляем span для города -->
+    <!-- Другие данные профиля -->
+</div>
+	  
+</div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        let initialAvatar = null; // переменная для хранения исходного аватара
+		let currentAvatarUrl = null; //  URL текущего аватара (из БД или по умолчанию)
+
+        function loadProfileData() {
+            $.ajax({
+                url: "../api/get_user_data.php", // Ссылка на скрипт, который получает данные
+                type: "GET",
+                dataType: "json",
+                success: function(response) {
+                    if (response.status === "success") {
+                        $("#username").text(response.user_data.name || "");
+                        $("#useremail").text(response.user_data.email || "");
+                        $("#usersurname").text(response.user_data.surname || "");
+                        $("#userbirthdate").text(response.user_data.databirthday || "");
+                        $("#usercity").text(response.user_data.city || "");
+
+                        // Отображаем аватар, если он есть
+                        if (response.user_data.photo) {
+                            $("#userAvatar").attr("src", "data:image/png;base64," + response.user_data.photo);
+                            currentAvatarUrl = "data:image/png;base64," + response.user_data.photo; // Сохраняем URL аватара из БД
+                        } else {
+                            $("#userAvatar").attr("src", "../Картинки/iconAvtor.png");
+                            currentAvatarUrl = "../Картинки/iconAvtor.png"; // Сохраняем URL аватара по умолчанию
+                        }
+                        initialAvatar = currentAvatarUrl;  //  Сохраняем initialAvatar
+                    } else {
+                        // Обработка ошибки (например, перенаправление на login.html)
+                        window.location.href = "login.html";
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error("AJAX Error: " + status + " - " + error);
+                }
+            });
+        }
+
+        loadProfileData();
+
+    });
+</script>
+
+
+
+
+<footer>
+	
+	<div>
+	<h4>Information</h4>
+	
+    <ul class = "listfoot">	  
+      <li><a href="../html/index.html">Главная</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="../html/gallery.html">Галерея</a></li>	 
+    </ul>
+ 
+	
+	
+	</div>
+	
+	<div>
+	<h4>Contact</h4>
+	<ul class = "listfoot">	  
+      <li>dasha.kanaeva.05@yandex.ru</li>
+      <li>89041831478</li>
+       
+    </ul>
+	
+	</div>
+	
+  <!-- &copy; <i>2025 Kanaeva Dasha</i> -->
+</footer>
+
+
+</body>
+</html>

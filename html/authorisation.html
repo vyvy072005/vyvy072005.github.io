@@ -11,6 +11,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	
+	<script src="../Scripts/jquery-3.7.1.min.js"></script>
 
 </head>
 <body>
@@ -41,17 +43,20 @@
 	<h2>Вход</h2>
    
 	
-    <form>
+    <form id="loginForm">
 	<label for="email">Адрес электронной почты</label><br>
-    <input type="email" id="email" required><br><br>
+    <input type="email" id="email" name="email" required><br><br>
 
     <label for="password">Пароль</label><br>
-    <input type="password" id="password" required><br><br>
+    <input type="password" id="password" name="password" required><br><br>
 
     
     <button type="submit" name="1">Войти</button> 
      
 	</form>
+	
+	
+
 	
 
   </div>
@@ -92,6 +97,34 @@
 	
   <!-- &copy; <i>2025 Kanaeva Dasha</i> -->
 </footer>
+
+<script>
+        $(document).ready(function() {
+		console.log(555555)
+            $("#loginForm").submit(function(event) {
+                event.preventDefault(); // Предотвращаем стандартную отправку формы
+
+                $.ajax({
+                    url: "../api/enter.php",
+                    type: "POST",
+                    data: $(this).serialize(),
+                    dataType: "json",
+                    success: function(response) {
+                        if (response.status === "success") {
+                            // Перенаправляем пользователя на страницу аккаунта
+                            window.location.href = response.redirect;
+                        } else {
+                            // Показываем сообщение об ошибке
+                            alert(response.text);
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error("AJAX Error: " + status + " - " + error);
+                    }
+                });
+            });
+        });
+    </script>
 
 
 </body>

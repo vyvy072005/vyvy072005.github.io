@@ -1,3 +1,8 @@
+<?php
+	session_start();
+?>
+
+
 <!doctype html>
 <html>
 <head>
@@ -41,15 +46,16 @@
 	<h2>Вход</h2>
    
 	
-    <form>
+   <!--  <form method="post" action="../php/register_process.php"> -->
+  <form action="../api/adduser.php" method="post" enctype="multipart/form-data" onsubmit="addUserOnClient(this); return false;">
 	<label for="email">Адрес электронной почты</label><br>
-    <input type="email" id="email" required><br><br>
+    <input type="email" id="email" name="email" required><br><br>
 
     <label for="password">Пароль</label><br>
-    <input type="password" id="password" required><br><br>
+    <input type="password" id="password" name="pass" required><br><br>
 	
 	<label for="password">Повтор пароля</label><br>
-    <input type="password" id="password" required><br><br>
+    <input type="password" id="password" name="pass2"required><br><br>
 
     
     <button type="submit" name="1">Зарегистрироваться</button> 

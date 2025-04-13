@@ -1,0 +1,84 @@
+/* Добавьте или измените стили по мере необходимости, чтобы соответствовать вашему дизайну */
+
+.profile-block {
+    display: flex;
+     width: 60em;
+    height: 35em;
+    max-width: 600em;
+    margin: 50em auto;
+    border-radius: 3em;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); 
+   
+
+.info-section {
+    background-color: white;
+	width: 35em;
+    height: auto;
+    /* ... другие стили */
+    flex: 1; /* Занимает доступное пространство */
+    height: 100%;/* Заполнит весь блок родителя */
+    display: flex; /* Чтобы flex-direction работал */
+    flex-direction: column; /* Контент сверху вниз */
+
+}
+
+.profile-data {
+	background: linear-gradient(to bottom, rgba(11, 29, 39, 0.8), rgba(11, 29, 39, 0.8));
+  flex: 1; /* Также занимает доступное пространство */
+  height: 100%; /* Заполнит весь блок родителя */
+   padding: 2em;
+}
+.info-section h2 {
+    color: #F0E3A0; 
+    font-family: Montserrat, sans-serif;
+
+	 font-size: 2em;
+  padding-top: 0px ;
+  padding-left: 25px;
+}
+
+
+
+
+
+.profile-data p {
+    font-family: Montserrat, sans-serif;
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.profile-data strong {  
+    font-weight: bold;
+}
+
+img {
+	
+	margin-left: 110px;
+}
+
+.edit-button { 
+font-family: Montserrat, sans-serif;
+	margin-left: 100px;
+    margin-right: 80%;
+    padding: 15px 55px;
+    font-size: 1.1em;
+    background-color: #fcf0ab;
+    color: #00121C;
+    border: none;
+    cursor: pointer;
+
+}
+/* Добавьте стили для полей ввода, если необходимо */
+.profile-data input[type="text"],
+.profile-data input[type="email"],
+.profile-data input[type="date"] {
+  width: 80%; /* Занимает большую часть доступного места */
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Montserrat, sans-serif;
+  font-size: 1em;
+}

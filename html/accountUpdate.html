@@ -1,0 +1,183 @@
+<?php
+	session_start();
+?>
+
+
+<!doctype html>
+<html>
+<head>
+	
+	<title>Путешествия</title>
+	<link rel="stylesheet" href="../css/headIndex.css">
+	<link rel="stylesheet" href="../css/indexmain.css">
+	<link rel="stylesheet" href="../css/title.css">
+	<link rel="stylesheet" href="../css/gardient.css">
+	<link rel="stylesheet" href="../css/account.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	
+	<script src="../Scripts/jquery-3.7.1.min.js"></script>
+
+</head>
+<body>
+<header>
+  <div class="header-background">
+  <img src="../Картинки/indexPicture.jpg" alt="Фон шапки">
+   <div class="gradient-overlay"></div> 
+  </div>
+ <div id="wrapper">
+ <a href="#" class="icon-link"><img src="../Картинки/logoWhite.png" alt="Иконка"></a> 
+ </div>
+ <div id="avatar">
+ <a href="../html/authorisation.html" class="icon-link"><img src="../Картинки/iconAvatarWhite.png" alt="Аккаунт"></a>
+ </div>
+	
+  <nav class="main-menu">  
+    <ul>	  
+      <li><a href="#">Главная</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="#">Галерея</a></li>	 
+    </ul>
+  </nav>
+</header>
+<div class="header-content">
+    <div class="profile-block">
+      <div class="info-section">
+        <h2>Редактировать профиль</h2>
+			<form id="uploadForm" action="../api/update_photo.php" method="post" enctype="multipart/form-data">
+				<input type="file" name="photo" id="photoInput">
+				<button type="submit">Загрузить</button>
+			</form>
+       </div>
+	  
+
+      <div class="profile-data">
+        <form action="../api/update_profile.php" method="post">  <!-- Форма отправляет данные на update_profile.php -->
+          <p>
+            <strong>Имя:</strong>
+            <input type="text" name="name" id="name">
+          </p>
+          <p>
+            <strong>Фамилия:</strong>
+            <input type="text" name="surname" id="surname">
+          </p>
+          <p>
+            <strong>Email:</strong>
+            <input type="email" name="email" id="email">
+          </p>
+          <p>
+            <strong>Дата рождения:</strong>
+            <input type="date" name="birthdate" id="birthdate">
+          </p>
+          <p>
+            <strong>Город:</strong>
+            <input type="text" name="city" id="city">
+          </p>
+		 
+          <!-- Другие поля для редактирования -->
+          <button class="edit-button" type="submit">Сохранить изменения</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<script>
+    $(document).ready(function() {
+		let initialAvatar = null; // переменная для хранения исходного аватара
+	
+        $.ajax({
+            url: "../api/get_user_data.php",
+            type: "GET",
+            dataType: "json",
+            success: function(response) {
+                if (response.status === "success") {
+                    // Заполняем поля формы данными пользователя
+                    $("#name").val(response.user_data.name || "");
+                    $("#surname").val(response.user_data.surname || "");
+                    $("#email").val(response.user_data.email || "");
+                    $("#birthdate").val(response.user_data.databirthday || ""); // databirthday  (или birthdate)
+                    $("#city").val(response.user_data.city || "");
+
+						 // Отображаем аватар, если он есть
+					if (response.user_data.photo) {
+						$("#userAvatar").attr("src", "data:image/png;base64," + response.user_data.photo);
+						initialAvatar = "data:image/png;base64," + response.user_data.photo; //  Сохраняем исходный аватар
+					} else {
+						$("#userAvatar").attr("src", "../Картинки/iconAvtor.png");
+						initialAvatar = "../Картинки/iconAvtor.png"; // Сохраняем аватар по умолчанию
+					}
+					
+					
+					
+					
+                } else {
+                    window.location.href = "login.html";
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error("AJAX Error: " + status + " - " + error);
+            }
+        });
+		
+		$("#uploadForm").submit(function(event) {
+        event.preventDefault(); // Предотвращаем стандартную отправку формы
+
+        let formData = new FormData(this); //  Создаем FormData
+
+        $.ajax({
+            url: "../api/update_photo.php",
+            type: "POST",
+            formData, //  Отправляем FormData
+            processData: false, //  Не обрабатываем данные
+            contentType: false, //  Отключаем Content-Type
+            dataType: "json",
+            success: function(response) {
+                alert(response.message);
+                if (response.status === "success") {
+                    //  Перезагрузите аватар на странице
+                    //  (например, вызвав loadProfileData() из предыдущих примеров)
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error("AJAX Error: " + status + " - " + error);
+                alert("Произошла ошибка при отправке данных.");
+            }
+        });
+    });
+		
+  });
+  
+</script>
+
+<footer>
+	
+	<div>
+	<h4>Information</h4>
+	
+    <ul class = "listfoot">	  
+      <li><a href="../html/index.html">Главная</a></li>
+      <li><a href="#">О нас</a></li>
+      <li><a href="../html/gallery.html">Галерея</a></li>	 
+    </ul>
+ 
+	
+	
+	</div>
+	
+	<div>
+	<h4>Contact</h4>
+	<ul class = "listfoot">	  
+      <li>dasha.kanaeva.05@yandex.ru</li>
+      <li>89041831478</li>
+       
+    </ul>
+	
+	</div>
+	
+  <!-- &copy; <i>2025 Kanaeva Dasha</i> -->
+</footer>
+
+
+</body>
+</html>
